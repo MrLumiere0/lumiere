@@ -1,0 +1,168 @@
+.App {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 1rem;
+  position: absolute;
+
+}
+
+.account{
+  border-radius: 10px;
+  width: 20%;
+  background-color: #222224;
+  box-sizing: border-box;
+  padding: .5rem;
+  display: flex;
+  flex-direction: column;
+  
+  
+}
+
+
+.mainContent{
+  border: blue 10px solid;
+  width: 50%;
+}
+
+.priceAction{
+  border: green 10px solid;
+  width: 20%;
+}
+#logo{
+  display: flex;
+  font-size: .75rem;
+  justify-content: center;
+}
+
+#logoP1{
+  color: white;
+}
+
+#logoP2{
+  color:  grey;
+  margin-left: .5rem;
+}
+
+.accountNav{
+  width: 90%;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  padding-left: .5rem;
+  padding-left: .5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  box-sizing: border-box;
+  background-color: #16151a;
+  color: #464647;
+align-self: center;
+border-radius: 15px;
+}
+
+.accountNav button{
+  /* margin-left: 9rem; */
+  height: 4rem;
+  width: 10rem;
+  border: none;
+  border-radius: 15px;
+}
+
+.accountNav button:hover{
+  /* margin-left: 9rem; */
+  height: 4rem;
+  width: 10rem;
+  border: none;
+  border-radius: 15px;
+}
+
+#signIn{
+  margin-bottom: 2rem;
+  background-color: grey;
+  color: white;
+  font-size: 1.25rem;
+}
+
+#signIn:hover{
+  margin-bottom: 2rem;
+  background-color: white;
+  color: grey;
+  cursor: pointer;
+  font-size: 1.25rem;
+}
+
+
+#copy_Req_button {
+  background-color: rgba(7, 129, 254);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+#copy_Req_button:hover{
+  background-color:white;
+  color:  rgba(7, 129, 254);
+  font-size: 1.1rem;
+  font-weight: 400;
+  cursor: pointer;
+
+}
+
+
+.navItemListNews{
+  align-self: center;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin-top: 5rem;
+align-items: center;
+border-bottom: 1px solid white;
+
+  }
+  
+  .nav_Item{
+    width: 100%;
+    height:7rem;
+  text-decoration: none;
+  color: white;
+  font-size: 3rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #464647;
+  }
+  .nav_Item:hover{
+    width: 100%;
+    height:7rem;
+  text-decoration: none;
+  font-size: 4.5rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+
+  }
+
+
+  #News {
+      color: rgba(7, 129, 254);
+      font-size: 2rem;
+  }
+
+  #News:hover {
+    color:white;
+    font-size: 4.5rem;
+  }
