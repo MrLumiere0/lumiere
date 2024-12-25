@@ -23,33 +23,36 @@ export function Demo () {
     const [email, setEmail] = useState("");
     const [phoneNum, setPhoneNum] = useState("");
     const [role, setRole] = useState("");
-    const [errors, setErrors] = useState({});
+    const [formErr, setErrors] = useState({});
+    const [validForm, setValidForm] = useState(true)
 
+    
     function Mouse() {
         const { mouse } = useThree();
     
-        return useFrame(() => {
-          console.log(mouse.x, mouse.y, mouse.z);
-        });
+        // return useFrame(() => {
+        //   console.log(mouse.x, mouse.y, mouse.z);
+        // });
       }
 
     
       
   useEffect(() => {
  
-    console.log("firstName:", firstName)
-    console.log("middleName:", middleName)
-    console.log("lastName:", lastName)
-    console.log("role:", role)
-    console.log("email:", email)
-    console.log("phoneNum:", phoneNum)
-    console.log("errors:", errors)
+    // console.log("firstName:", firstName)
+    // console.log("middleName:", middleName)
+    // console.log("lastName:", lastName)
+    // console.log("role:", role)
+    // console.log("email:", email)
+    // console.log("phoneNum:", phoneNum)
+    // console.log("errors:", formErr)
 
 
-  },[firstName,lastName, role, middleName,email,phoneNum, errors])
+  },[firstName,lastName, role, middleName,email,phoneNum, formErr, validForm])
 
-  async function userRegister (event)  {
+  async function userRegister (event )  {
     event.preventDefault();
+    setErrors({})
     formValidationSignUp(
     { firstName },
     { lastName },
@@ -59,9 +62,30 @@ export function Demo () {
     {role},
     { setErrors }
     )
+     const errCapture = {formErr}
+     const errs = errCapture.formErr
+    
+
+     if (Object.keys(errs).length === 0){
+        console.log("No keys")           
+
+
+     }
+
+        else if (Object.keys(errs).length > 0){
+            console.log("KEYS")
+            setValidForm(false)
+
+
+
+
+        }
+    }
+
+    
 
     // try a try..catch statemtn to break if there are error state is not empty
-  }
+  
     return (
         <div className={styles.demo}>
             <div className={styles.main}>
@@ -75,7 +99,7 @@ export function Demo () {
                     <div className={styles.navItemList}>
                     <Link className={styles.nav_Item} to="/">Home</Link>
                     <Link  className={styles.nav_Item}to="/news">Fundamentals</Link>
-                    <Link  className={styles.nav_Item_last}to="/demo">Charts</Link>
+                    {/* <Link  className={styles.nav_Item_last}to="/demo">Charts</Link> */}
                     </div>
                 </nav>
 
@@ -104,7 +128,8 @@ export function Demo () {
                     </div>
 
                     <div className={styles.Right}> 
-                        <div className={styles.Form}>
+                        { validForm ?<div className={styles.Form}>
+                            
                             <form className={styles.FormInputs} onSubmit={(event) =>userRegister(event)}>
                                 <div className={styles.FormWork}>
                                 <label> 
@@ -112,14 +137,14 @@ export function Demo () {
                                      autoFocus type='email'
                                     placeholder=' Work Email'></input>
                                 </label>
-                                {errors.email && <span>{errors.email}</span>}
+                                {formErr.email && <span>{formErr.email}</span>}
 
 
                                 <label>
                                 <input type='text' onChange={(e) => {setRole(e.target.value)}}
                                 placeholder=' Role'></input>
                                 </label>
-                                {errors.role && <span>{errors.role}</span>}
+                                {formErr.role && <span>{formErr.role}</span>}
 
                                 </div>
 
@@ -128,7 +153,7 @@ export function Demo () {
                                 <input type='text' onChange={(e) => {setfirstName(e.target.value)}}
                                 placeholder=' First Name'></input>
                                 </label>
-                                {errors.first && <span>{errors.first}</span>}
+                                {formErr.first && <span>{formErr.first}</span>}
 
 
                                 {/* <label>
@@ -141,7 +166,7 @@ export function Demo () {
                                 <input type='text' onChange={(e) => {setLastName(e.target.value)}}
                                 placeholder=' Last Name'></input>
                                 </label>
-                                {errors.last && <span>{errors.last}</span>}
+                                {formErr.last && <span>{formErr.last}</span>}
 
                                 </div>
 
@@ -165,8 +190,15 @@ export function Demo () {
                                     <button className={styles.formSubmit} type='submit' name='submit'>Submit</button>
 
                                 </div>                            
-                            </form>
-                        </div>
+                            </form> 
+                            </div>:
+                            <div className={styles.Form_Confirm}>
+                            <div className={styles.FormInputs_Confirm}>
+                                    <h3>Thank you</h3>
+                                    <p>Our team will  contact with you shortly.</p>
+                                 </div> 
+                                 </div>}
+                       
                     </div>              
                  </div>
 

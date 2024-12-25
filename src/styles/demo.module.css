@@ -100,11 +100,13 @@ span{
 }
 
 .Copy{
+    display: flex;
+    flex-direction: column;
      color: white;
      position: absolute;
      top: 0;
      /* border: 1px solid white; */
-     width: fit-content;
+     width: inherit;
      padding-top: 2rem;
      padding-left: 5rem;
 }
@@ -154,21 +156,55 @@ span{
     border-radius: 5px;
     max-width: 900px;
     min-width: 500px
-
-
-    
 }
+
 .FormInputs{
-    height: inherit;
+    background-color: white;
+    color: black;
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     box-sizing: border-box;
     padding: 1rem;
+   
+}
 
-    
-    
+.Form_Confirm{
+    padding: 1rem;
+    padding-top: 0;
+    box-sizing: border-box;
+    height: 40rem;
+    width: 80%;
+    -webkit-box-shadow: 0px 0px 17px 1px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 0px 17px 1px rgba(255,255,255,1);
+    box-shadow: 0px 0px 17px 1px rgba(255,255,255,1);
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    max-width: 900px;
+    min-width: 500px
+}
+
+.FormInputs_Confirm{
+    background-color: black;
+    color: white;
+    height: 75%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.FormInputs_Confirm h3{
+    font-size: 3rem;
+}
+
+.FormInputs_Confirm p{
+    font-size: 1.5rem;
+    font-weight: 100;
 }
 .FormInputs div {
     width: 100%;

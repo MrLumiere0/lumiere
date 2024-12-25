@@ -116,14 +116,13 @@ function App() {
           <option value="">Sort by</option>
           <option value="relevancy">Relevant</option>
           <option value="popularity">Popularity</option>
-          <option value="publishedAt">Newwest</option>
+          <option value="publishedAt">Newest</option>
 
           </select>
         </div>
 
         <div className={styles.listView}>
           <ul id={styles.views}>
-            <h3  >Categories:</h3>
             
               {newSearch ?  <div className={styles.resultsView}>
               <button className={styles.returnBttn} onClick={handleClick}><IoReturnDownBackOutline className={styles.return}/> </button> 
@@ -142,7 +141,9 @@ function App() {
 
 
       <div className={styles.priceAction}>
+        <div className={styles.priceActionHeader}>
         <h2>Economic Releases</h2>
+        </div>
         <div className={styles.priceAction_View}>
           <ul>
 

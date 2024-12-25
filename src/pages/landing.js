@@ -33,7 +33,7 @@ export  function Landing() {
    
         <div className={styles.navItemList}>
           <Link className={styles.nav_Item} to="/news">Fundamentals</Link>
-          <Link  className={styles.nav_Item}to="/charts">Price Action</Link>
+          <Link  className={styles.nav_Item}to="/charts">Charts</Link>
           <Link  className={styles.nav_Item}to="/demo"> 
           <button  className={styles.ReqDemo}>Request Demo</button> 
           </Link>
@@ -55,7 +55,7 @@ export  function Landing() {
       wrapper="h2"
       cursor={false}
       repeat={0}
-      style={{ fontSize: '10rem', display: 'inline-block',color:"white", fontWeight:"550", marginBottom:"5rem"}}
+      style={{ fontSize: '10rem', display: 'inline-block',color:"white", fontWeight:"600", marginBottom:"5rem"}}
     />
 
 
@@ -77,10 +77,10 @@ export  function Landing() {
       wrapper="h2"
       cursor={true}
       repeat={0}
-      style={{ fontSize: '6rem', display: 'inline-block', color:"rgba(7, 129, 254)",  fontWeight:"400", marginTop:"0"}}
+      style={{ fontSize: '6rem', display: 'inline-block', color:"rgba(7, 129, 254)",  fontWeight:"300", marginTop:"0"}}
     />
   {showElement && <div className={styles.copy_bttns}>
-    <Link to="/"> 
+    <Link to="/signOn"> 
     <button  className={styles.button} id={styles.copy_user_button}><FaRegUser /></button>
     </Link>
 

@@ -1,6 +1,8 @@
 import styles from '../styles/signIn.module.css'
 import { Link } from "react-router-dom";
 import { useState, useEffect } from 'react';
+import { TypeAnimation } from 'react-type-animation';
+
 
 
 
@@ -39,7 +41,24 @@ export function  SignOn(){
                 </nav>
                     <div className={styles.content}>
                             <div className={styles.Left}>
-                            <h3> Welcome Back</h3>
+                            <TypeAnimation
+                                    sequence={[
+                                        '',
+                                        500, 
+                                        'Welcome Back',
+                                        , 
+                                        () => {
+                                        console.log('Sequence completed');
+                                        },
+                                    ]}
+                                    preRenderFirstString="false"
+                                    wrapper="h2"
+                                    cursor={true}
+                                    repeat={0}
+                                    style={{ fontSize: '5rem', display: 'inline-block',color:"white", fontWeight:"550", marginBottom:"15rem", 
+                                        textShadow: "0px 0px 11px white"
+                                    }}
+                                          />                            
                             </div>
 
                             <div className={styles.Right}> 

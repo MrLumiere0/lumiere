@@ -5,7 +5,7 @@ import App from './App';
 import { Landing } from './pages/landing';
 import {Demo} from './pages/demo';
 import { Charts } from './pages/charts';
-import { SignOn } from './pages/signIn';
+import { SignOn } from './pages/signOn';
 // import reportWebVitals from './reportWebVitals';
 // import './index.css';
 

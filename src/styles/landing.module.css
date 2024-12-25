@@ -43,7 +43,7 @@ position: fixed;
 }
 
 #logoP2{
-    color: grey;
+    color: #919196;
     margin-left: .5rem;
 }
 
@@ -123,7 +123,9 @@ margin-top: 1rem;
 }
 
 #copy_user_button{
-    background-color: grey;
+    background-color:   
+     #919196;
+    ;
     color: white;
     font-size: 1rem;
 
