@@ -32,8 +32,8 @@ export  function Landing() {
         </div>
    
         <div className={styles.navItemList}>
-          <Link className={styles.nav_Item} to="/news">News</Link>
-          <Link  className={styles.nav_Item}to="/">Price Action</Link>
+          <Link className={styles.nav_Item} to="/news">Fundamentals</Link>
+          <Link  className={styles.nav_Item}to="/charts">Price Action</Link>
           <Link  className={styles.nav_Item}to="/demo"> 
           <button  className={styles.ReqDemo}>Request Demo</button> 
           </Link>

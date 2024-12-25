@@ -4,7 +4,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App';
 import { Landing } from './pages/landing';
 import {Demo} from './pages/demo';
-import { News } from './pages/news';
+import { Charts } from './pages/charts';
+import { SignOn } from './pages/signIn';
 // import reportWebVitals from './reportWebVitals';
 // import './index.css';
 
@@ -28,9 +29,18 @@ const router = createBrowserRouter([
     path:"/news",
     element: <App />,
     errorElement:  <div >404 not found</div>
-
-  
+  },
+  {
+    path:"/charts",
+    element: <Charts />,
+    errorElement:  <div >404 not found</div>
+  },
+  {
+    path:"/signOn",
+    element: <SignOn />,
+    errorElement:  <div >404 not found</div>
   }
+ 
 
 
 ])

@@ -1,10 +1,10 @@
-import techImg from '../../public/assets/technology.jpg'
-import healthImg from '../../public/assets/health.jpeg'
-import  goldImg from '../../public/assets/gold.jpg'
-import cryptoImg from '../../public/assets/crypto.png'
-import scienceImg from '../../public/assets/science.png'
-import busImg from '../../public/assets/business.jpeg'
-import sportsImg from '../../public/assets/sports.webp'
+import techImg from '../../src/assets_Pics/technology.jpg'
+import healthImg from '../../src/assets_Pics/health.jpeg'
+import  goldImg from '../../src/assets_Pics/gold.jpg'
+import cryptoImg from '../../src/assets_Pics/crypto.png'
+import scienceImg from '../../src/assets_Pics/science.png'
+import busImg from '../../src/assets_Pics/business.jpeg'
+import sportsImg from '../../src/assets_Pics/sports.webp'
  
 
 const categories = [
@@ -12,7 +12,8 @@ const categories = [
     {id:2, name:"Health", imgUrl:healthImg },
     {id:3, name:"Gold", imgUrl:goldImg },
     {id:4, name:"Crypto", imgUrl:cryptoImg },
-    {id:5, name:"Science", imgUrl:scienceImg},
     {id:6, name:"Business", imgUrl:busImg },
     {id:7, name:"Sports", imgUrl:sportsImg },
 ]
+
+export default categories

@@ -1,5 +1,5 @@
 
-export function News () {
+export function Charts () {
     return (
         <></>
     )
