@@ -14,8 +14,9 @@ return <primitive object={scene} {...props} />
 }
 
 
-
 export function Demo () {
+
+
 
     const [firstName, setfirstName] = useState("");
     const [lastName, setLastName] = useState("");
@@ -38,17 +39,17 @@ export function Demo () {
     
       
   useEffect(() => {
- 
-    // console.log("firstName:", firstName)
-    // console.log("middleName:", middleName)
-    // console.log("lastName:", lastName)
-    // console.log("role:", role)
-    // console.log("email:", email)
-    // console.log("phoneNum:", phoneNum)
-    // console.log("errors:", formErr)
+    // Display state values update  in real time
+    console.log("firstName:", firstName)
+    console.log("middleName:", middleName)
+    console.log("lastName:", lastName)
+    console.log("role:", role)
+    console.log("email:", email)
+    console.log("phoneNum:", phoneNum)
+    console.log("errors:", formErr)
 
 
-  },[firstName,lastName, role, middleName,email,phoneNum, formErr, validForm])
+  },[firstName,lastName, role, middleName,email,phoneNum,formErr, validForm])
 
   async function userRegister (event )  {
     event.preventDefault();
@@ -67,18 +68,34 @@ export function Demo () {
     
 
      if (Object.keys(errs).length === 0){
-        console.log("No keys")           
+        // console.log("No keys")   
+        try {
+            const response = await fetch("/getNews", {
+                method: "POST",
+                headers: {
+                    "Content-Type": 'application/json',
+                },
+                body:JSON.stringify({"username":`${email}`, "role":`${role}`, "first_Name":`${firstName}`, "last_Name":`${lastName}` ,"phone":`${phoneNum}`
+            })})
+        
 
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                  }
+
+                  console.log('Data submitted successfully:', response);
+
+         } catch (error) {
+            console.error('Error submitting data:', error);
+        }        
+        
+         
 
      }
 
         else if (Object.keys(errs).length > 0){
             console.log("KEYS")
             setValidForm(false)
-
-
-
-
         }
     }
 
@@ -173,7 +190,7 @@ export function Demo () {
 
                                 <div>
                                 <label>
-                                    <input type='number'onChange={(e) => {setPhoneNum(e.target.value)}}
+                                    <input type='text'onChange={(e) => {setPhoneNum(e.target.value)}}
                                      placeholder=' Phone Number'></input>
 
                                 </label>

@@ -33,7 +33,7 @@ export  function Landing() {
    
         <div className={styles.navItemList}>
           <Link className={styles.nav_Item} to="/news">Fundamentals</Link>
-          <Link  className={styles.nav_Item}to="/charts">Charts</Link>
+          <Link  className={styles.nav_Item}to="/signOn">Charts</Link>
           <Link  className={styles.nav_Item}to="/demo"> 
           <button  className={styles.ReqDemo}>Request Demo</button> 
           </Link>
